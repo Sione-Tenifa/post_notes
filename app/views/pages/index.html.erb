@@ -1,0 +1,8 @@
+<h1> Post it Notes </h1>
+<p><%= link_to 'New Page', new_page_path %></p>
+<% @page.each do |post| %>
+  <h2><%= post.title %></h2>
+  <%= link_to 'Show Page', page_path(post) %>
+  <%= link_to 'Edit page', edit_page_path(post) %>
+  <%= link_to 'Destroy Page', post, method: :delete %>
+<% end %>
